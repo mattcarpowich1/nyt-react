@@ -1,0 +1,14 @@
+{
+  "name": "nyt-react",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/mattcarpowich1/nyt-react.git",
+  "author": "Matt Carpowich",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6",
+    "path": "^0.12.7"
+  }
+}
