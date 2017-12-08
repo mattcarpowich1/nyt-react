@@ -4,12 +4,12 @@ import Main from './components/Main/main.js'
 
 const App = () => {
 
-	return (
-		<div>
-			<Header />
-			<Main />
-		</div>
-	)
+  return (
+    <div>
+      <Header />
+      <Main />
+    </div>
+  )
 
 }
 
