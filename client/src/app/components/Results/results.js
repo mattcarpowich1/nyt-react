@@ -12,12 +12,11 @@ const Results = props => {
 						let snippet = article.snippet
 						let url = article.web_url
 						let date = article.pub_date
-						console.log(article)
 						return (
 							<div className="card result" key={article._id}>
 								<header className="card-header">
 									<h3 className="card-header-title">
-										{ headline }
+										{headline}
 									</h3>
 									<button className="button card-header-icon is-dark save"
 										onClick={() => {
