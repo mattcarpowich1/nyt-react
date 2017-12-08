@@ -28,7 +28,7 @@ class Search extends Component {
       })
   }
 
-  saveArticle = (headline, date, url) => {
+  handleSave(headline, date, url) {
     API.saveArticle(headline, date, url)
   }
 
@@ -38,7 +38,7 @@ class Search extends Component {
         <Query handleInputChange={this.handleInputChange.bind(this)} 
           handleSubmit={this.handleSubmit.bind(this)} />
         <Results articles={this.state.results}
-          handler={this.saveArticle} />
+          handler={this.handleSave} />
       </div>
     )
   }
