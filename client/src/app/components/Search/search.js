@@ -6,16 +6,16 @@ import './search.css'
 
 class Search extends Component {
 
-	state = {
-		search: "",
-		numRecords: "5",
-		results: []
-	}
+  state = {
+    search: "",
+    numRecords: "5",
+    results: []
+  }
 
-	handleInputChange(e) {
-		const { name, value } = e.target
-		this.setState({ [name]: value })
-	}
+  handleInputChange(e) {
+    const { name, value } = e.target
+    this.setState({ [name]: value })
+  }
 
   handleSubmit(e) {
     e.preventDefault()
@@ -32,16 +32,16 @@ class Search extends Component {
     API.saveArticle(headline, date, url)
   }
 
-	render() {
-		return (
-			<div>
-				<Query handleInputChange={this.handleInputChange.bind(this)} 
+  render() {
+    return (
+      <div>
+        <Query handleInputChange={this.handleInputChange.bind(this)} 
           handleSubmit={this.handleSubmit.bind(this)} />
-				<Results articles={this.state.results}
+        <Results articles={this.state.results}
           handler={this.saveArticle} />
-			</div>
-		)
-	}
+      </div>
+    )
+  }
 
 }
 
