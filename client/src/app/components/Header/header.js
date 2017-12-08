@@ -4,7 +4,7 @@ import './header.css'
 const Header = () => {
 
 	return (
-		<nav className="navbar">
+		<nav id="nav" className="navbar">
 			<div className="navbar-brand">
 				<div className="logo-name-area">
 					<img src="./images/nyt-logo.svg" />

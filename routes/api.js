@@ -1,11 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const { findAll, create, remove } = require('../controllers/articlesController.js');
 
-router.get('/', (req, res) => {
-	const stuff = {
-		Hello: 'World'
-	}
-	res.json(stuff);
+router.get('/saved', (req, res) => {
+	findAll(req, res);
 });
+
+router.post('/saved', (req, res) => {
+	create(req, res);
+});
+
+router.delete('/saved:id', (req, res) => {
+	remove(req.params.id, req, res);
+})
 
 module.exports = router;

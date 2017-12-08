@@ -1,0 +1,28 @@
+.results {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.results > * {
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+h2 {
+	font-size: 3em;
+	border-bottom: 1px solid #ccd;
+}
+
+.save {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 12px;
+}
+
+.card-header-icon {
+	padding: 0px 5px;
+}
