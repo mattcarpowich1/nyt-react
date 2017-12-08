@@ -2,42 +2,41 @@ import axios from "axios"
 
 export default {
   getArticles: function(query, numArticles) {
-  	return new Promise((resolve, reject) => {
-  		const authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931"
-	    const queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +
-	      authKey + "&q=" + query
+    return new Promise((resolve, reject) => {
+      const authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931"
+      const queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +
+        authKey + "&q=" + query
 
       axios.get(queryURLBase)
-      	.then(response => {
-
-      		const results = response.data.response.docs
+        .then(response => {
+          const results = response.data.response.docs
           let max
-      		const articles = []
+          const articles = []
 
           results.length < numArticles ? max = results.length : max = parseInt(numArticles)
 
-      		for (let i = 0; i < max; i++) {
-      			articles.push(results[i])
-      		}
+          for (let i = 0; i < max; i++) {
+            articles.push(results[i])
+          }
 
-      		resolve(articles)
+          resolve(articles)
 
-      	})
-      	.catch(err => {
-      		reject("Error: " + err)
-      	})
-  	})
+        })
+        .catch(err => {
+          reject("Error: " + err)
+        })
+    })
   },
 
   findAll: function(req, res) {
     return new Promise((resolve, reject) => {
       axios.get('api/saved')
-      .then(articles => {
-        resolve(articles)
-      })
-      .catch(err => {
-        reject(err)
-      })
+        .then(articles => {
+          resolve(articles)
+        })
+        .catch(err => {
+          reject(err)
+        })
     })
   },
 
