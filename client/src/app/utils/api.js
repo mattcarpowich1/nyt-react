@@ -47,7 +47,7 @@ export default {
       url: url
     })
     .then(article => {
-      console.log("Success!", article)
+      console.log("Success!")
     })
     .catch(err => {
       console.log(err)
