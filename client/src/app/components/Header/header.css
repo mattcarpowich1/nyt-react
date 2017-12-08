@@ -1,23 +1,23 @@
 #nav {
-	background-color: #142f66;
-	padding: 24px;
+  background-color: #142f66;
+  padding: 24px;
 }
 
 .logo-name-area {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	color: #fcfdff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fcfdff;
 }
 
 img {
-	margin-right: 20px;
-	height: 100px;
-	width: 100px;
+  margin-right: 20px;
+  height: 100px;
+  width: 100px;
 }
 
 h1 {
-	font-size: 4em;
-	font-family: 'Open Sans', sans-serif;
+  font-size: 4em;
+  font-family: 'Open Sans', sans-serif;
 }
