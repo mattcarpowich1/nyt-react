@@ -5,6 +5,10 @@
   "repository": "https://github.com/mattcarpowich1/nyt-react.git",
   "author": "Matt Carpowich",
   "license": "MIT",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
