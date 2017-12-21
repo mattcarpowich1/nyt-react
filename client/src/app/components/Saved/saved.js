@@ -5,13 +5,17 @@ import './saved.css'
 class Saved extends Component {
 
   state = {
-    articles: []
+    articles: [], 
+    show: false
   }
 
   componentDidMount() {
     API.findAll()
       .then(response => {
-        this.setState({ articles: response.data})
+        this.setState({ 
+          articles: response.data,
+          show: true
+        })
       })
       .catch(err => {
         console.log(err)
